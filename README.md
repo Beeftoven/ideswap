@@ -1,4 +1,4 @@
-# ideswap
+# "ideswap"
 
 Move Android, Java and Kotlin projects between **Android Studio** and **VS Code**, in either
 direction, without losing anything.
