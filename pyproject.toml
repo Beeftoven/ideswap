@@ -4,14 +4,29 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ideswap"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Move Android/Java/Kotlin projects between Android Studio and VS Code without losing settings."
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = []
+keywords = ["android", "android-studio", "vscode", "gradle", "migration"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Build Tools",
+]
+
+[project.urls]
+Homepage = "https://github.com/Beeftoven/ideswap"
+Issues = "https://github.com/Beeftoven/ideswap/issues"
 
 [project.scripts]
 ideswap = "ideswap.cli:main"
 
 [tool.setuptools]
 packages = ["ideswap"]
+
+[tool.setuptools.dynamic]
+version = {attr = "ideswap.__version__"}
