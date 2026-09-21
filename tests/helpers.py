@@ -16,7 +16,7 @@ def make_tree(root: Path, files: dict):
         if isinstance(content, bytes):
             p.write_bytes(content)
         else:
-            p.write_text(textwrap.dedent(content).lstrip("\n"), encoding="utf-8", newline="")
+            p.write_bytes(textwrap.dedent(content).lstrip("\n").encode("utf-8"))
 
 
 def snapshot(root: Path) -> dict:
